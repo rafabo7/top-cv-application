@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 
 import { Interface } from './components/Interface'
 import { Output } from './components/Output'
@@ -6,13 +6,19 @@ import { Output } from './components/Output'
 import './App.css'
 
 function App() {
-  // const [output, setOutput] = useState(null)
+  const [personalInfo, setPersonalInfo] = useState("")
+
+  function showContent (e) {
+    const info = e.target.value
+    setPersonalInfo(info)
+
+  }
 
 
   return (
     <>
-    <Interface />
-    <Output />
+    <Interface onSave={showContent} />
+    <Output personalInfo={personalInfo} />
       
     </>
   )
