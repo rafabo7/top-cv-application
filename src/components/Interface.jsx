@@ -1,18 +1,18 @@
+import { InputField } from "./InputField"
 
-
-export function Interface ({ onSave }) {
+export function Interface ({ onChange, personalInfo }) {
+    const { fullName } = personalInfo
 
     return (
         <section className="interface">
             <h2>Interface</h2>
-            <section className="form">
-                <label htmlFor="firstName">First Name</label>
-                <input 
-                type="text" 
-                name="firstName" 
-                id="firstName"
-                onChange={onSave} />
-            </section>
+            <InputField 
+            type="text"
+            id="fullName"
+            labelText="Full Name"
+            data-key="fullName"
+            placeHolder={fullName}
+            onChange={onChange} />
             
         </section>
     )

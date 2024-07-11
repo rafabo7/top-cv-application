@@ -1,7 +1,6 @@
 const exampleData = {
     personalInfo: {
-        firstName: "Rafael",
-        lastName: "Botella",
+        fullName: "Rafael Botella",
         email: "oneBot@gmail.com",
         phoneNumber: "+34 555 555 555",
         city: "Alicante"

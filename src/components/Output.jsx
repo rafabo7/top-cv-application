@@ -1,13 +1,14 @@
 
 
 export function Output ({ personalInfo }) {
+    const { fullName } = personalInfo
     
 
     return (
         <section className="output">
             <h2>Output</h2>
             <main>
-                <p>{personalInfo}</p>
+                <h2>{fullName}</h2>
 
             </main>
 
