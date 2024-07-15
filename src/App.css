@@ -5,5 +5,7 @@
     place-content: center;
     text-align: center;
     padding: 12px;
-    gap: 14px
+    gap: 14px;
+
+    background-color: #f3f4f6;
 }
