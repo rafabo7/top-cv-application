@@ -1,9 +1,9 @@
-
+import '../Styles/InputField.css'
 
 export function InputField ({ labelText, id, type, onChange, "data-key": dataKey, placeHolder}) {
 
     return (
-        <>
+        <section className='input-field'>
         <label htmlFor={id}
         >{labelText}
         </label>
@@ -12,6 +12,6 @@ export function InputField ({ labelText, id, type, onChange, "data-key": dataKey
         onChange={onChange}
         data-key={dataKey}
         placeholder={placeHolder} />
-        </>
+        </section>
     )
 }
