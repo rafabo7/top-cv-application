@@ -18,11 +18,11 @@ function App() {
 
 
   return (
-    <>
+    <main className='app' >
     <Interface onChange={handlePersonalInfoChange} personalInfo={personalInfo} />
     <Output personalInfo={personalInfo} />
       
-    </>
+    </main>
   )
 }
 
