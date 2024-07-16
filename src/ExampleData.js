@@ -1,3 +1,4 @@
+
 const exampleData = {
     personalInfo: {
         fullName: "Rafael Botella",
@@ -9,8 +10,10 @@ const exampleData = {
     education: [
         {
             degree: "Web Developement and Professional Archaeology",
-            yearOfExpedition: "2024",
-            school: "University of Zumo de Naranja"
+            year: "2024",
+            school: "University of Zumo de Naranja",
+            city: "Alicante",
+            id: 0
         },
     ],
 
@@ -18,7 +21,9 @@ const exampleData = {
         {
             position: "Freak and Geek",
             company: "Estrats Treballs d'Arqueologia",
-            time: "2022 - 2024" //To Do: Enable this to capture the cool date-type input
+            city: "Zamora",
+            time: "2022 - 2024", //To Do: Enable this to capture the cool date-type input
+            id: 0
         },
     ]
 }
