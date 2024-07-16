@@ -1,10 +1,11 @@
 import { InputField } from "./InputField"
-import '../Styles/PersonalInfo.css'
+import '../Styles/InputSections.css'
 
 export function PersonalInfo ({ onChange }) {
 
     return (
-        <section className="personal-info">
+        <section className="personal-info section">
+        <p className="section-header">Personal Information</p>
             
             <InputField 
             type="text"
