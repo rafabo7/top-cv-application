@@ -10,13 +10,15 @@ export function Education ({education, isOpen, toggleIsOpen}) {
     return (
         <section className={`education section`}>
             
-            <p>Education</p>
-            <button
-            onClick={() => {
-                const sectionToChange = isOpen ? '' : 'education'
-                toggleIsOpen(sectionToChange)}}>{
-                isOpen ? 'Close' : 'Open'}
-            </button>
+            <header className="section-header">
+                <p>Education</p>
+                <button
+                onClick={() => {
+                    const sectionToChange = isOpen ? '' : 'education'
+                    toggleIsOpen(sectionToChange)}}>{
+                    isOpen ? 'Close' : 'Open'}
+                </button>
+            </header>
             {
                 isOpen && (
                     <>
