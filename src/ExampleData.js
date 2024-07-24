@@ -13,7 +13,7 @@ const exampleData = {
             year: "2024",
             school: "University of Zumo de Naranja",
             city: "Alicante",
-            id: 0
+            id: '0'
         },
     ],
 

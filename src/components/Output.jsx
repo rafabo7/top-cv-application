@@ -1,8 +1,7 @@
 import '../Styles/Output.css'
 
-export function Output ({ personalInfo }) {
+export function Output ({ personalInfo, education }) {
     const { fullName, email, phoneNumber, city } = personalInfo
-    
 
     return (
         <section className="output">
@@ -13,6 +12,23 @@ export function Output ({ personalInfo }) {
                     <p>{phoneNumber}</p>
                     <p>{city}</p>
                 </footer>
+
+                    <div>
+                        {education.map( (item) => {
+                            return (
+                            <li
+                                key={item.id}>
+                                    <p>{item.degree}</p>
+                                    <p>{item.year}</p>
+                                    <p>{item.school}</p>
+                                    <p>{item.city}</p>
+                            </li>
+                            )
+                        })}
+                    </div>
+                
+
+
 
             </main>
 
