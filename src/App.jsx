@@ -28,7 +28,23 @@ function App() {
   }
 
   function handleSectionChange (e) {
-    const { section } = exampleData
+    const section  = open
+    const { key } = e.target.dataset
+    const form = e.target.closest('form')
+    const id = form.id
+    const value = e.target.value
+
+
+    if (section === 'education') {
+      const newEducation = education.map( (item) => {
+        if ( item.id === id ) item[key] = value
+        return item
+      }
+    )
+      setEducation(newEducation)
+    }
+
+
     
   }
 
@@ -36,13 +52,16 @@ function App() {
   return (
     <main className='app' >
     <Interface 
-      onChange={handlePersonalInfoChange} 
+      onChange={handlePersonalInfoChange}
+      onSectionChange={handleSectionChange} 
       personalInfo={personalInfo}
       education={education}
       experience={experience} 
       isOpen={open}
       toggleIsOpen={toggleIsOpen} />
-    <Output personalInfo={personalInfo} />
+    <Output 
+      personalInfo={personalInfo}
+      education={education} />
       
     </main>
   )
