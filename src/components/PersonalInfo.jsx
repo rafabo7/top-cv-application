@@ -5,7 +5,7 @@ export function PersonalInfo ({ onChange }) {
 
     return (
         <section className="personal-info section">
-        <p className="section-header">Personal Information</p>
+        <h2 className="section-header">Personal Information</h2>
             
             <InputField 
             type="text"
