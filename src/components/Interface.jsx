@@ -1,6 +1,7 @@
 import { PersonalInfo } from "./PersonalInfo"
 import '../Styles/Interface.css'
 import { Education } from "./Education"
+import { Experience } from "./Experience"
 
 export function Interface ({ onChange, onSectionChange, personalInfo, education, experience, isOpen, toggleIsOpen }) {
 
@@ -11,6 +12,12 @@ export function Interface ({ onChange, onSectionChange, personalInfo, education,
             education={education}
             onChange={onSectionChange}
             isOpen={isOpen == 'education'}
+            toggleIsOpen={toggleIsOpen}  />
+            
+            <Experience  
+            experience={experience}
+            onChange={onSectionChange}
+            isOpen={isOpen == 'experience'}
             toggleIsOpen={toggleIsOpen}  />
 
             
