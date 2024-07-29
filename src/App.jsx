@@ -82,7 +82,8 @@ function addForm(section) {
       addForm={addForm} />
     <Output 
       personalInfo={personalInfo}
-      education={education} />
+      education={education}
+      experience={experience} />
       
     </main>
   )

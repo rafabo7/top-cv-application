@@ -1,6 +1,6 @@
 import '../Styles/Output.css'
 
-export function Output ({ personalInfo, education }) {
+export function Output ({ personalInfo, education, experience }) {
     const { fullName, email, phoneNumber, city } = personalInfo
 
     return (
@@ -26,6 +26,21 @@ export function Output ({ personalInfo, education }) {
                             )
                         })}
                     </div>
+                    
+                    <div>
+                        {experience.map( (item) => {
+                            return (
+                            <li
+                                key={item.id}>
+                                    <p>{item.position}</p>
+                                    <p>{item.company}</p>
+                                    <p>{item.city}</p>
+                                    <p>{item.time}</p>
+                            </li>
+                            )
+                        })}
+                    </div>
+
                 
 
 
