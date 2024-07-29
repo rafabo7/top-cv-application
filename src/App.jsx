@@ -24,8 +24,8 @@ function App() {
 
   function toggleIsOpen(section) {
     setOpen(section)
-
   }
+
 
   function handleSectionChange (e) {
     const section  = open
@@ -44,30 +44,20 @@ function App() {
       setEducation(newEducation)
     }
   }
-function addForm(section) {
-  if (section === 'education'){
-    const newEducation = [...education]
-    newEducation.push({
-      degree: "",
-      year:"",
-      school: "",
-      city:"",
-      id: uniqid()
-    })
-    setEducation(newEducation)
-  } 
-  if (section === 'experience'){
-    const newExperience = [...experience]
-    newExperience.push({
-      position: "",
-      company:"",
-      city: "",
-      time:"",
-      id: uniqid()
-    })
-    setExperience(newExperience)
-  } 
+function onSave (e, section) {
+  const form = e
+  console.log('Workin')
+  console.log(form)
+
+  // if ( section === 'education') addEducationInfo(form)
+  // if ( section === 'experience') addExperienceInfo(form)
+
 }
+
+// function addEducationInfo(form) {
+//   const degree = form.querySelector
+
+// }
 
   return (
     <main className='app' >
@@ -79,7 +69,8 @@ function addForm(section) {
       experience={experience} 
       isOpen={open}
       toggleIsOpen={toggleIsOpen}
-      addForm={addForm} />
+      onSave={onSave} />
+
     <Output 
       personalInfo={personalInfo}
       education={education}

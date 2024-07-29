@@ -14,7 +14,7 @@ const exampleData = {
             school: "University of Zumo de Naranja",
             city: "Alicante",
             id: '0',
-            isCollapsed: true
+            
         },
     ],
 
@@ -25,7 +25,7 @@ const exampleData = {
             city: "Zamora",
             time: "2022 - 2024", //To Do: Enable this to capture the cool date-type input
             id: 0,
-            isCollapsed: true
+            
 
         },
     ]
