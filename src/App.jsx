@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useId } from 'react'
+import uniqid from 'uniqid'
 
 import { Interface } from './components/Interface'
 import { Output } from './components/Output'
@@ -44,7 +44,30 @@ function App() {
       setEducation(newEducation)
     }
   }
-
+function addForm(section) {
+  if (section === 'education'){
+    const newEducation = [...education]
+    newEducation.push({
+      degree: "",
+      year:"",
+      school: "",
+      city:"",
+      id: uniqid()
+    })
+    setEducation(newEducation)
+  } 
+  if (section === 'experience'){
+    const newExperience = [...experience]
+    newExperience.push({
+      position: "",
+      company:"",
+      city: "",
+      time:"",
+      id: uniqid()
+    })
+    setExperience(newExperience)
+  } 
+}
 
   return (
     <main className='app' >
@@ -55,7 +78,8 @@ function App() {
       education={education}
       experience={experience} 
       isOpen={open}
-      toggleIsOpen={toggleIsOpen} />
+      toggleIsOpen={toggleIsOpen}
+      addForm={addForm} />
     <Output 
       personalInfo={personalInfo}
       education={education} />
