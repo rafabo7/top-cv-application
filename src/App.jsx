@@ -46,18 +46,39 @@ function App() {
   }
 function onSave (e, section) {
   const form = e
-  console.log('Workin')
-  console.log(form)
 
-  // if ( section === 'education') addEducationInfo(form)
-  // if ( section === 'experience') addExperienceInfo(form)
+
+  if ( section === 'education') addEducationInfo(form)
+  if ( section === 'experience') addExperienceInfo(form)
 
 }
 
-// function addEducationInfo(form) {
-//   const degree = form.querySelector
+function addEducationInfo(form) {
+  const degree = form.querySelector('#degree').value
+  const school = form.querySelector('#school').value
+  const year = form.querySelector('#year').value
+  const city = form.querySelector('#city').value
 
-// }
+  const newEntry = {
+    degree,
+    year,
+    school,
+    city,
+    id: uniqid() 
+  }
+
+  console.log(degree, school, year, city)
+
+  const newEducation = [...education, newEntry]
+
+  form.reset()
+
+
+
+  setEducation(newEducation)
+  
+
+}
 
   return (
     <main className='app' >
