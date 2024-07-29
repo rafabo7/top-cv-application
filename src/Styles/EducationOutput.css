@@ -1,0 +1,29 @@
+.education-output p {
+    margin: 0;
+    
+}
+
+.education-output .article {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.education-output .article .col{
+    display: flex;
+    flex-direction: column;
+}
+
+.education-output .article .left-col{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 0 4px 0 0;
+}
+
+.education-output .article .right-col{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 0 0 4px;
+}
+

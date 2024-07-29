@@ -1,3 +1,4 @@
+import { EducationOutput } from './EducationOutput.jsx'
 import '../Styles/Output.css'
 
 export function Output ({ personalInfo, education, experience }) {
@@ -13,21 +14,15 @@ export function Output ({ personalInfo, education, experience }) {
                     <p>{city}</p>
                 </footer>
 
-                    <div>
-                        {education.map( (item) => {
-                            return (
-                            <li
-                                key={item.id}>
-                                    <p>{item.degree}</p>
-                                    <p>{item.year}</p>
-                                    <p>{item.school}</p>
-                                    <p>{item.city}</p>
-                            </li>
-                            )
-                        })}
+                    <div className="education-output">
+                        <h4 className="output-section-header">Education</h4>
+                        <EducationOutput 
+                            education={education} />
                     </div>
                     
                     <div>
+                    <h4 className="output-section-header">Experience</h4>
+
                         {experience.map( (item) => {
                             return (
                             <li
