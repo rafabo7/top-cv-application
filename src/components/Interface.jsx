@@ -29,7 +29,8 @@ export function Interface ({ onChange,
             onChange={onSectionChange}
             isOpen={isOpen == 'experience'}
             toggleIsOpen={toggleIsOpen}
-            toggleIsCollapsed={toggleIsCollapsed}  />
+            toggleIsCollapsed={toggleIsCollapsed}
+            onSave={onSave}  />
 
             
         </section>
