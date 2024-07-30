@@ -4,6 +4,12 @@
     gap: 12px;
 }
 
+.output .resume-header {
+    background-color: #0e374e;
+    color: white;
+
+}
+
 .output .details {
     display: flex;
     flex-direction: row;
@@ -15,6 +21,9 @@
 
 .output .output-section-header {
     font-weight: bold;
-    background-color: aquamarine;
+    line-height: 36px;
+    color: #0e374e;
+    font-size: 1.2rem;
+    background-color: #ebebeb;
     
 }

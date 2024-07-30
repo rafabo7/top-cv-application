@@ -1,5 +1,6 @@
 import { EducationOutput } from './EducationOutput.jsx'
 import '../Styles/Output.css'
+import { ExperienceOutput } from './ExperienceOutput.jsx'
 
 export function Output ({ personalInfo, education, experience }) {
     const { fullName, email, phoneNumber, city } = personalInfo
@@ -7,12 +8,14 @@ export function Output ({ personalInfo, education, experience }) {
     return (
         <section className="output">
             <main>
-                <h2>{fullName}</h2>
-                <footer className="details">
-                    <p>{email}</p>
-                    <p>{phoneNumber}</p>
-                    <p>{city}</p>
-                </footer>
+                <section className='output resume-header'>
+                    <h2>{fullName}</h2>
+                    <footer className="details">
+                        <p>{email}</p>
+                        <p>{phoneNumber}</p>
+                        <p>{city}</p>
+                    </footer>
+                </section>
 
                     <div className="education-output">
                         <h4 className="output-section-header">Education</h4>
@@ -22,18 +25,9 @@ export function Output ({ personalInfo, education, experience }) {
                     
                     <div>
                     <h4 className="output-section-header">Experience</h4>
+                    <ExperienceOutput experience={experience}/>
 
-                        {experience.map( (item) => {
-                            return (
-                            <li
-                                key={item.id}>
-                                    <p>{item.position}</p>
-                                    <p>{item.company}</p>
-                                    <p>{item.city}</p>
-                                    <p>{item.time}</p>
-                            </li>
-                            )
-                        })}
+                        
                     </div>
 
                 

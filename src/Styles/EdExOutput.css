@@ -1,0 +1,31 @@
+.section-output p {
+    margin: 0;
+    
+}
+
+.section-output-article {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 8px 0;
+    gap: 14px;
+}
+
+
+.section-output-article .left-col{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: unset;
+}
+
+.section-output-article .right-col{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: unset;
+}
+
+.section-output-article .right-col .bold {
+    font-weight: bold;
+}
+
