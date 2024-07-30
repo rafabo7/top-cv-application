@@ -22,6 +22,7 @@ const exampleData = {
         {
             position: "Freak and Geek",
             company: "Estrats Treballs d'Arqueologia",
+            description: "I worked on so many things I just can´t remember all. The make the Mr. fix-it of the year (I was the only one around)",
             city: "Zamora",
             time: "2022 - 2024", //To Do: Enable this to capture the cool date-type input
             id: 0,
