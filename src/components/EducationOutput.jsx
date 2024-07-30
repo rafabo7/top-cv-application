@@ -1,4 +1,4 @@
-import '../Styles/EducationOutput.css'
+import '../Styles/EdExOutput.css'
 
 export function EducationOutput ({ education }) {
 
@@ -7,15 +7,15 @@ export function EducationOutput ({ education }) {
         <>
         {education.map( (item) => {
             return (
-            <article className="education-output article"
+            <article className="section-output-article"
                 key={item.id}>
-                    <div className="education-output article left-col">
+                    <div className="section-output left-col">
                         <p>{item.year}</p>
                         <p>{item.city}</p>
                     </div>
 
-                    <div className="education-output article right-col">
-                        <p>{item.school}</p>
+                    <div className="section-output right-col">
+                        <p className='bold'>{item.school}</p>
                         <p>{item.degree}</p>
                     </div>
             </article>

@@ -1,6 +1,6 @@
 import { InputField } from "./InputField"
 
-export function EducationForm ({ onChange, onSave }) {
+export function EducationForm ({ onSave }) {
 
     return (
         <form className="education-form" 
@@ -12,7 +12,6 @@ export function EducationForm ({ onChange, onSave }) {
                     labelText="Degree" 
                     id="degree" 
                     type="text" 
-                    onChange={onChange}
                     data-key="degree" 
                     placeHolder="The studies yout took" />
                     
@@ -20,7 +19,6 @@ export function EducationForm ({ onChange, onSave }) {
                     labelText="School" 
                     id="school" 
                     type="text" 
-                    onChange={onChange}
                     data-key="school" 
                     placeHolder="Issued by" />
                     
@@ -28,7 +26,6 @@ export function EducationForm ({ onChange, onSave }) {
                     labelText="Year" 
                     id="year" 
                     type="text" 
-                    onChange={onChange}
                     data-key="year" 
                     placeHolder="Year of expedition" />
                     
@@ -36,7 +33,6 @@ export function EducationForm ({ onChange, onSave }) {
                     labelText="City" 
                     id="city" 
                     type="text" 
-                    onChange={onChange}
                     data-key="city" 
                     placeHolder="Location" />
 
