@@ -1,8 +1,13 @@
 
-export function ExperienceDisplay ({ experience }) {
+export function ExperienceDisplay ({ experience, onDelete }) {
 
     return ( 
-        experience.map( ( item ) => <h4 key={item.id} >{item. time} / {item.position}</h4>)
+        experience.map(
+             ( item ) => <p key={item.id} >
+                {item. time} / {item.position}
+                <button onClick={() => onDelete(item, 'experience')}>Delete</button>
+                <button>Edit</button>
+                </p>)
      )
 
 

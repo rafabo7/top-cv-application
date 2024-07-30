@@ -14,7 +14,7 @@ function App() {
   const [experience, setExperience] = useState(exampleData.experience)
 
   //State for one section open at a time
-  const [open, setOpen] = useState('education')
+  const [open, setOpen] = useState('null')
 
   function handlePersonalInfoChange (e) {
     const { key } = e.target.dataset
@@ -27,23 +27,6 @@ function App() {
   }
 
 
-  function handleSectionChange (e) {
-    const section  = open
-    const { key } = e.target.dataset
-    const form = e.target.closest('form')
-    const id = form.id
-    const value = e.target.value
-
-
-    if (section === 'education') {
-      const newEducation = education.map( (item) => {
-        if ( item.id === id ) item[key] = value
-        return item
-      }
-    )
-      setEducation(newEducation)
-    }
-  }
 function onSave (e, section) {
   const form = e
 
@@ -93,17 +76,38 @@ function addEducationInfo(form) {
     setExperience(newExperience)
     }
 
+    function onDelete (item, section) {
+      const deletedId = item.id
+      console.log(deletedId)
+      console.log(section)
+
+      if (section === 'education') deleteData(deletedId, education, section)
+      if (section === 'experience') deleteData(deletedId, experience, section)
+      
+    }
+
+    function deleteData(deletedId, array, section) {
+      const copy = [...array]
+      const newArray = copy.filter( item => item.id !== deletedId)
+
+      console.log(newArray)
+
+      section === 'education' ? setEducation(newArray) : setExperience(newArray)
+    }
+
+    
+
   return (
     <main className='app' >
     <Interface 
       onChange={handlePersonalInfoChange}
-      onSectionChange={handleSectionChange} 
       personalInfo={personalInfo}
       education={education}
       experience={experience} 
       isOpen={open}
       toggleIsOpen={toggleIsOpen}
-      onSave={onSave} />
+      onSave={onSave}
+      onDelete={onDelete} />
 
     <Output 
       personalInfo={personalInfo}

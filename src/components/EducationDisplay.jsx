@@ -1,7 +1,13 @@
-export function EducationDisplay ({ education }) {
+export function EducationDisplay ({ education, onDelete, onEdit }) {
 
     return ( 
-        education.map( ( item ) => <h4 key={item.id} >{item.year} / {item.degree}</h4>)
+        education.map( 
+            ( item ) => <p key={item.id} >
+            {item.year} / {item.degree}
+            <button onClick={() => onDelete(item, 'education')}>Delete</button>
+            <button>Edit</button>
+            </p>
+            )
      )
 
 

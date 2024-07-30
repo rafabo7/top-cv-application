@@ -9,7 +9,8 @@ export function Education ({
     isOpen,
     toggleIsOpen,
     onChange,
-    onSave}) {
+    onSave,
+    onDelete}) {
 
     const { degree, year, school, city } = education
 
@@ -31,7 +32,8 @@ export function Education ({
                 <>
                 <EducationDisplay 
                     education={education}
-                    onChange={onChange} />
+                    onChange={onChange}
+                    onDelete={onDelete} />
 
                 <EducationForm
                 onSave={onSave} />
