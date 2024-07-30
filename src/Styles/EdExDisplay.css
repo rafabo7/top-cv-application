@@ -1,0 +1,22 @@
+.item-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+.item-display button {
+    font-size: 1.2rem;
+    padding: 4px;
+    border: 2px transparent solid;
+    box-shadow: unset;
+}
+
+.item-display button:hover {
+    box-shadow: 1px 1px 9px 1px black;
+}
+
+.delete-button {
+    background-color: rgb(205, 70, 70);
+    color: white;
+}
