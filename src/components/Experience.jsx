@@ -1,9 +1,9 @@
-import { InputField } from "./InputField"
-import ExperienceDisplay from "./ExperienceDisplay"
+import { ExperienceForm } from "./ExperienceForm"
+import { ExperienceDisplay } from "./ExperienceDisplay"
 import '../Styles/InputSections.css'
 
 
-export function Experience ({experience, isOpen, toggleIsOpen, onChange}) {
+export function Experience ({experience, isOpen, toggleIsOpen, onChange, onSave}) {
 
 
     return (
@@ -21,8 +21,12 @@ export function Experience ({experience, isOpen, toggleIsOpen, onChange}) {
 
             { 
             isOpen && ( 
+                <>
                 <ExperienceDisplay 
                 experience={experience} />
+
+                <ExperienceForm onSave={onSave} />
+                </>
              ) }
 
             

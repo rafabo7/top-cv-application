@@ -1,7 +1,8 @@
-export default function ExperienceDisplay ({ experience }) {
+
+export function ExperienceDisplay ({ experience }) {
 
     return ( 
-        experience.map( ( item ) => <h4 key={item.id} >{item.position}</h4>)
+        experience.map( ( item ) => <h4 key={item.id} >{item. time} / {item.position}</h4>)
      )
 
 

@@ -67,18 +67,31 @@ function addEducationInfo(form) {
     id: uniqid() 
   }
 
-  console.log(degree, school, year, city)
-
   const newEducation = [...education, newEntry]
-
   form.reset()
-
-
-
   setEducation(newEducation)
-  
+  }
 
-}
+  function addExperienceInfo(form) {
+    const position = form.querySelector('#position').value
+    const company = form.querySelector('#company').value
+    const description = form.querySelector('#description').value
+    const city = form.querySelector('#city').value
+    const time = form.querySelector('#time').value
+  
+    const newEntry = {
+      position,
+      company,
+      description,
+      city,
+      time,
+      id: uniqid() 
+    }
+  
+    const newExperience = [...experience, newEntry]
+    form.reset()
+    setExperience(newExperience)
+    }
 
   return (
     <main className='app' >
