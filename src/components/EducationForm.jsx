@@ -17,7 +17,7 @@ export function EducationForm ({ onSave, toEdit }) {
                     type="text" 
                     data-key="degree" 
                     placeHolder="The studies yout took"
-                    value={toEdit ? toEdit.degree : ""} />
+                    defaultValue={toEdit ? toEdit.degree : ""} />
                     
                     <InputField 
                     labelText="School" 
@@ -25,7 +25,7 @@ export function EducationForm ({ onSave, toEdit }) {
                     type="text" 
                     data-key="school" 
                     placeHolder="Issued by"
-                    value={toEdit ? toEdit.school : ""} />
+                    defaultValue={toEdit ? toEdit.school : ""} />
                     
                     <InputField 
                     labelText="Year" 
@@ -33,7 +33,7 @@ export function EducationForm ({ onSave, toEdit }) {
                     type="text" 
                     data-key="year" 
                     placeHolder="Year of expedition"
-                    value={toEdit ? toEdit.year : ""} />
+                    defaultValue={toEdit ? toEdit.year : ""} />
                     
                     <InputField 
                     labelText="City" 
@@ -41,7 +41,7 @@ export function EducationForm ({ onSave, toEdit }) {
                     type="text" 
                     data-key="city" 
                     placeHolder="Location"
-                    value={toEdit ? toEdit.degree : ""} />
+                    defaultValue={toEdit ? toEdit.city : ""} />
 
                     <input type='submit' value='Save'/>
 

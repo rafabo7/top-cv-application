@@ -7,7 +7,7 @@ export function InputField ({
     onChange,
     "data-key": dataKey,
     placeHolder,
-    value}) {
+    defaultValue}) {
 
 
     return (
@@ -21,7 +21,8 @@ export function InputField ({
             onChange={onChange}
             data-key={dataKey}
             placeholder={placeHolder}
-            maxLength={340} />  
+            maxLength={340}
+            defaultValue={defaultValue} />  
         ) : (
         <input 
             type={type}
@@ -29,7 +30,7 @@ export function InputField ({
             onChange={onChange}
             data-key={dataKey}
             placeholder={placeHolder}
-            value={value} />
+            defaultValue={defaultValue} />
         )}
         
         </section>

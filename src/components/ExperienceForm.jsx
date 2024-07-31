@@ -14,7 +14,7 @@ export function ExperienceForm ({onSave, toEdit}) {
                     type="text" 
                     data-key="position" 
                     placeHolder="Your position"
-                    value={toEdit ? toEdit.position : ""} />
+                    defaultValue={toEdit ? toEdit.position : ""} />
                     
                     <InputField 
                     labelText="Company" 
@@ -22,7 +22,7 @@ export function ExperienceForm ({onSave, toEdit}) {
                     type="text" 
                     data-key="company" 
                     placeHolder="e.g. Nestlé / My uncle's company etc." 
-                    value={toEdit ? toEdit.company : ""}/>
+                    defaultValue={toEdit ? toEdit.company : ""}/>
                     
                     <InputField 
                     labelText="Description" 
@@ -30,7 +30,7 @@ export function ExperienceForm ({onSave, toEdit}) {
                     type="textarea" 
                     data-key="description" 
                     placeHolder="The role you played in the company, the goals you achivied, the projects you worked on, etc. Keep it simple." 
-                    value={toEdit ? toEdit.description : ""}/>
+                    defaultValue={toEdit ? toEdit.description : ""}/>
                     
                     <InputField 
                     labelText="Time" 
@@ -38,7 +38,7 @@ export function ExperienceForm ({onSave, toEdit}) {
                     type="text" 
                     data-key="time" 
                     placeHolder="2022 - present" 
-                    value={toEdit ? toEdit.time : ""}/>
+                    defaultValue={toEdit ? toEdit.time : ""}/>
                     
                     <InputField 
                     labelText="City" 
@@ -46,7 +46,7 @@ export function ExperienceForm ({onSave, toEdit}) {
                     type="text" 
                     data-key="city" 
                     placeHolder="Location" 
-                    value={toEdit ? toEdit.city : ""}/>
+                    defaultValue={toEdit ? toEdit.city : ""}/>
 
                     <input type='submit' value='Save'/>
 
