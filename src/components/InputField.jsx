@@ -12,7 +12,8 @@ export function InputField ({ labelText, id, type, onChange, "data-key": dataKey
             id={id}
             onChange={onChange}
             data-key={dataKey}
-            placeholder={placeHolder} />  
+            placeholder={placeHolder}
+            maxLength={340} />  
         ) : (
         <input 
             type={type}

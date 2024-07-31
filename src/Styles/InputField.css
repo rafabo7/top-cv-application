@@ -13,11 +13,23 @@
 }
 
 .input-field input {
-    border: unset;
     font-size: 14px;
     border: unset;
     border-radius: 8px;
     padding: 8px 6px;
     background-color: rgb(240, 240, 240);
 
+}
+
+.input-field textarea {
+    font-family: inherit;
+    max-width: 292px;
+    max-height: 160px;
+    min-height: 60px;
+
+    font-size: 14px;
+    border: unset;
+    border-radius: 8px;
+    padding: 8px 6px;
+    background-color: rgb(240, 240, 240);
 }
