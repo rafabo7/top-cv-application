@@ -12,7 +12,12 @@ export function Interface ({ onChange,
     toggleIsOpen,
     toggleIsCollapsed,
     onSave,
-    onDelete }) {
+    onDelete,
+    onEdit,
+    toEdit }) {
+
+    
+
 
     return (
         <section className="interface">
@@ -24,7 +29,10 @@ export function Interface ({ onChange,
             toggleIsOpen={toggleIsOpen}
             toggleIsCollapsed={toggleIsCollapsed}
             onSave={onSave} 
-            onDelete={onDelete} />
+            onDelete={onDelete}
+            onEdit={onEdit}
+            toEdit={toEdit}
+             />
             
             <Experience  
             experience={experience}
@@ -33,7 +41,9 @@ export function Interface ({ onChange,
             toggleIsOpen={toggleIsOpen}
             toggleIsCollapsed={toggleIsCollapsed}
             onSave={onSave}
-            onDelete={onDelete}  />
+            onDelete={onDelete}
+            onEdit={onEdit}
+            toEdit={toEdit}  />
 
             
         </section>

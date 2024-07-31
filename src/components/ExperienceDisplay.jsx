@@ -1,6 +1,6 @@
 import '../Styles/EdExDisplay.css'
 
-export function ExperienceDisplay ({ experience, onDelete }) {
+export function ExperienceDisplay ({ experience, onDelete, onEdit }) {
 
     return ( 
         experience.map(
@@ -11,7 +11,10 @@ export function ExperienceDisplay ({ experience, onDelete }) {
                     onClick={() => onDelete(item, 'experience')}
                     className='delete-button'
                         >Delete</button>
-                <button>Edit</button>
+                <button onClick={() => {
+                onEdit(item, 'experience')
+                onDelete(item, 'experience')
+                }}>Edit</button>
                 </p>)
      )
 

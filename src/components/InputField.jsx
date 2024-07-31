@@ -1,6 +1,14 @@
 import '../Styles/InputField.css'
 
-export function InputField ({ labelText, id, type, onChange, "data-key": dataKey, placeHolder}) {
+export function InputField ({ 
+    labelText,
+    id,
+    type,
+    onChange,
+    "data-key": dataKey,
+    placeHolder,
+    value}) {
+
 
     return (
         <section className='input-field'>
@@ -20,7 +28,8 @@ export function InputField ({ labelText, id, type, onChange, "data-key": dataKey
             id={id}
             onChange={onChange}
             data-key={dataKey}
-            placeholder={placeHolder} />
+            placeholder={placeHolder}
+            value={value} />
         )}
         
         </section>

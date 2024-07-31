@@ -1,6 +1,6 @@
 import { InputField } from './InputField.jsx'
 
-export function ExperienceForm ({ onSave}) {
+export function ExperienceForm ({onSave, toEdit}) {
 
     return (
         <form className="education-form" 
@@ -13,35 +13,40 @@ export function ExperienceForm ({ onSave}) {
                     id="position" 
                     type="text" 
                     data-key="position" 
-                    placeHolder="Your position" />
+                    placeHolder="Your position"
+                    value={toEdit ? toEdit.position : ""} />
                     
                     <InputField 
                     labelText="Company" 
                     id="company" 
                     type="text" 
                     data-key="company" 
-                    placeHolder="e.g. Nestlé / My uncle's company etc." />
+                    placeHolder="e.g. Nestlé / My uncle's company etc." 
+                    value={toEdit ? toEdit.company : ""}/>
                     
                     <InputField 
                     labelText="Description" 
                     id="description" 
                     type="textarea" 
                     data-key="description" 
-                    placeHolder="The role you played in the company, the goals you achivied, the projects you worked on, etc. Keep it simple." />
+                    placeHolder="The role you played in the company, the goals you achivied, the projects you worked on, etc. Keep it simple." 
+                    value={toEdit ? toEdit.description : ""}/>
                     
                     <InputField 
                     labelText="Time" 
                     id="time" 
                     type="text" 
                     data-key="time" 
-                    placeHolder="2022 - present" />
+                    placeHolder="2022 - present" 
+                    value={toEdit ? toEdit.time : ""}/>
                     
                     <InputField 
                     labelText="City" 
                     id="city" 
                     type="text" 
                     data-key="city" 
-                    placeHolder="Location" />
+                    placeHolder="Location" 
+                    value={toEdit ? toEdit.city : ""}/>
 
                     <input type='submit' value='Save'/>
 

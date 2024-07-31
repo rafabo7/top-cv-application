@@ -13,7 +13,10 @@ export function EducationDisplay ({ education, onDelete, onEdit }) {
                 className='delete-button'>
                     Delete
                     </button>
-            <button>Edit</button>
+            <button onClick={() => {
+                onEdit(item, 'education')
+                onDelete(item, 'education')
+                }}>Edit</button>
             </p>
             )
      )

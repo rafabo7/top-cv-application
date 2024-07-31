@@ -3,7 +3,13 @@ import { ExperienceDisplay } from "./ExperienceDisplay"
 import '../Styles/InputSections.css'
 
 
-export function Experience ({experience, isOpen, toggleIsOpen, onChange, onSave, onDelete}) {
+export function Experience ({experience,
+    isOpen,
+    toggleIsOpen,
+    onSave,
+    onDelete,
+    onEdit,
+    toEdit}) {
 
 
     return (
@@ -24,9 +30,12 @@ export function Experience ({experience, isOpen, toggleIsOpen, onChange, onSave,
                 <>
                 <ExperienceDisplay 
                 experience={experience}
-                onDelete={onDelete} />
+                onDelete={onDelete}
+                onEdit={onEdit} />
 
-                <ExperienceForm onSave={onSave} />
+                <ExperienceForm 
+                onSave={onSave}
+                toEdit={toEdit} />
                 </>
              ) }
 

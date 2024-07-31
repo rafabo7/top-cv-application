@@ -8,11 +8,14 @@ export function Education ({
     education,
     isOpen,
     toggleIsOpen,
-    onChange,
     onSave,
-    onDelete}) {
+    onDelete,
+    onEdit,
+    toEdit}) {
 
+    
     const { degree, year, school, city } = education
+
 
     return (
         <section className={`education section`}>
@@ -32,11 +35,13 @@ export function Education ({
                 <>
                 <EducationDisplay 
                     education={education}
-                    onChange={onChange}
-                    onDelete={onDelete} />
+                    onDelete={onDelete}
+                    onEdit={onEdit}  />
 
                 <EducationForm
-                onSave={onSave} />
+                onSave={onSave}
+                toEdit={toEdit}
+                education={education} />
                 </>
 
              ) }

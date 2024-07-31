@@ -12,9 +12,14 @@ function App() {
   const [personalInfo, setPersonalInfo] = useState(exampleData.personalInfo)
   const [education, setEducation] = useState(exampleData.education)
   const [experience, setExperience] = useState(exampleData.experience)
+  const [toEdit, setToEdit] = useState({})
+    
+    function onEdit (item) {
+        console.log(item)
+        setToEdit(item)}
 
   //State for one section open at a time
-  const [open, setOpen] = useState('null')
+  const [open, setOpen] = useState('education')
 
   function handlePersonalInfoChange (e) {
     const { key } = e.target.dataset
@@ -53,6 +58,7 @@ function addEducationInfo(form) {
   const newEducation = [...education, newEntry]
   form.reset()
   setEducation(newEducation)
+  setToEdit({})
   }
 
   function addExperienceInfo(form) {
@@ -74,12 +80,11 @@ function addEducationInfo(form) {
     const newExperience = [...experience, newEntry]
     form.reset()
     setExperience(newExperience)
+    setToEdit({})
     }
 
     function onDelete (item, section) {
       const deletedId = item.id
-      console.log(deletedId)
-      console.log(section)
 
       if (section === 'education') deleteData(deletedId, education, section)
       if (section === 'experience') deleteData(deletedId, experience, section)
@@ -94,7 +99,7 @@ function addEducationInfo(form) {
 
       section === 'education' ? setEducation(newArray) : setExperience(newArray)
     }
-
+    
     
 
   return (
@@ -107,7 +112,9 @@ function addEducationInfo(form) {
       isOpen={open}
       toggleIsOpen={toggleIsOpen}
       onSave={onSave}
-      onDelete={onDelete} />
+      onDelete={onDelete}
+      toEdit={toEdit}
+      onEdit={onEdit} />
 
     <Output 
       personalInfo={personalInfo}
