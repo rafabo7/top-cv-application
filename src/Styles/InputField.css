@@ -13,6 +13,7 @@
 }
 
 .input-field input {
+    font-family: inherit;
     font-size: 14px;
     border: unset;
     border-radius: 8px;
