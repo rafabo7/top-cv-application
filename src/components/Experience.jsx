@@ -18,7 +18,8 @@ export function Experience ({experience,
             <header className="section-header">
                 <h2>Experience</h2>
                 <button
-                onClick={() => {
+                    className='open-button'
+                    onClick={() => {
                     const sectionToChange = isOpen ? '' : 'experience'
                     toggleIsOpen(sectionToChange)}}>{
                     isOpen ? 'Close' : 'Open'}

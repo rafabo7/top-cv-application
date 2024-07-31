@@ -13,3 +13,11 @@
     justify-content: space-between;
     /* padding: 0 16px; */
 }
+
+.open-button {
+    font-size: 1.2rem;
+    padding: 4px 10px;
+    border: 2px transparent solid;
+    border-radius: 16px;
+    box-shadow: unset;
+}

@@ -43,7 +43,7 @@ export function EducationForm ({ onSave, toEdit }) {
                     placeHolder="Location"
                     defaultValue={toEdit ? toEdit.city : ""} />
 
-                    <input type='submit' value='Save'/>
+                    <input className="save-button" type='submit' value='Save'/>
 
                     
                     

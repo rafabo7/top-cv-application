@@ -23,6 +23,7 @@ export function Education ({
             <header className="section-header">
                 <h2>Education</h2>
                 <button
+                    className='open-button'
                     onClick={() => {
                         const sectionToChange = isOpen ? '' : 'education'
                         toggleIsOpen(sectionToChange)}}>{

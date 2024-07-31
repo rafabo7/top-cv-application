@@ -5,10 +5,13 @@
     align-items: center;
     gap: 14px;
 }
-.item-display button {
+
+
+.item-display button, .save-button {
     font-size: 1.2rem;
-    padding: 4px;
+    padding: 4px 10px;
     border: 2px transparent solid;
+    border-radius: 16px;
     box-shadow: unset;
 }
 
