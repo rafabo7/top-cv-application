@@ -1,8 +1,11 @@
-# React + Vite
+# CV / resume maker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+You can use it, tested and freely give feedback at [thi live version](https://ese-rafa-cv-maker.netlify.app/)
 
-Currently, two official plugins are available:
+A project based on The Odin Project curriculum.
+The user is able to enter their information, deleted, edit.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In this early version is up to the user the order in which his information is displayed. I recommend although from newer to older in both education an experience sections.
+
+The styles of this project are based on [Sharkri](https://github.com/Sharkri)'s solution for [this very same project](https://github.com/Sharkri/cv-application) of The Odin Project
+
