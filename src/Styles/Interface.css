@@ -4,5 +4,6 @@
     flex-direction: column;
     gap: 14px;
     flex-shrink: 2;
+    max-width: 340px;
     
 }
