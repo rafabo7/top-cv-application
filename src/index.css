@@ -1,3 +1,7 @@
 :root {
     --cv-color: #0e374e;
 }
+
+#root {
+    background-color: #f3f4f6;
+}
